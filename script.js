@@ -1,31 +1,48 @@
-// function to let computer randomly choose
+// get computer choice
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
     let computerChoice = choices.at(Math.floor(Math.random() * choices.length))
     return computerChoice;
 }
 
+// get player choice
 function getPlayerChoice() {
     let playerInput = prompt('type your choice...');
     let result = playerInput.toLowerCase();
     return result;
 }
 
+// play one round and save score
 function playRound(playerSelection, computerSelection) {
+    let computerScore = 0;
+    let playerScore = 0;
+
     if (playerSelection === computerSelection) {
         return "it's a tie replay this round";
     } else if (playerSelection === "rock" && computerSelection === "paper") {
-        return "You lose! paper beats rock";
+        computerScore++;
+        return `You lose! paper beats rock
+                computer: ${computerScore} | player: ${playerScore}`;
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
-        return "You win! rock beats scissors";
+        playerScore++;
+        return `You win! rock beats scissors
+                computer: ${computerScore} | player: ${playerScore}`;
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
-        return "You lose! scissors beats paper";
+        computerScore++;
+        return `You lose!scissors beats paper
+                computer: ${computerScore} | player: ${playerScore}`;
     } else if (playerSelection === "paper" && computerSelection === "rock") {
-        return "You win! paper beats rock";
+        playerScore++;
+        return `You win! paper beats rock
+                computer: ${computerScore} | player: ${playerScore}`;
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
-        return "You lose! rock beats scissors";
+        computerScore++;
+        return `You lose! rock beats scissors
+                computer: ${computerScore} | player: ${playerScore}`;
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "You win! scissors beats paper"
+        playerScore++;
+        return `You win! scissors beats paper
+                computer: ${computerScore} | player: ${playerScore}`;
     }
 }
 
