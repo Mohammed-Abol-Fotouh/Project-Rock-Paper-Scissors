@@ -35,7 +35,7 @@ function game() {
   let computerScore = 0,
     playerScore = 0;
 
-  for (i = 0; i < 3; i++) {
+  for (i = 0; i < 5; i++) {
     const result = playRound(getPlayerChoice(), getComputerChoice());
     console.log(result);
     if (result.includes("win")) {
