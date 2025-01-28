@@ -40,6 +40,9 @@ buttons.addEventListener("click", (e) => {
 		computerScore = 0;
 		round.textContent = "";
 		current.textContent = "";
+		setTimeout(() => {
+			winner.textContent = "";
+		}, 2000);
 	}
 });
 
