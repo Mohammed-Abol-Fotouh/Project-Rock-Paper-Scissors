@@ -49,3 +49,7 @@ main {
 		padding: 0 2.6rem;
 	}
 }
+
+p {
+	text-align: center;
+}
